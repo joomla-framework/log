@@ -1,4 +1,4 @@
-## The Log Package
+## The Log Package [![Build Status](https://travis-ci.org/joomla-framework/log.png?branch=master)](https://travis-ci.org/joomla-framework/log)
 
 ### Introduction
 
