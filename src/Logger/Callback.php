@@ -18,6 +18,7 @@ use Joomla\Log\AbstractLogger;
  * This allows unprecedented flexibility in the way logging can be handled.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class Callback extends AbstractLogger
 {

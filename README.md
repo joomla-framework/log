@@ -1,5 +1,9 @@
 ## The Log Package [![Build Status](https://travis-ci.org/joomla-framework/log.png?branch=master)](https://travis-ci.org/joomla-framework/log)
 
+### Deprecated
+
+The `joomla/log` package has been deprecated.  No further updates are planned.
+
 ### Introduction
 
 The Joomla Framework includes a Log package that allows for configurable, hook-driven logging to a variety of formats.

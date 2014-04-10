@@ -20,6 +20,7 @@ use Joomla\Log\LogEntry;
  * easy searching.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class Database extends AbstractLogger
 {

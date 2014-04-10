@@ -18,6 +18,7 @@ namespace Joomla\Log;
  * but will incur a performance hit due to INSERT being issued.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class Log
 {
