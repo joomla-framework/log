@@ -21,6 +21,7 @@ use Joomla\Log\Log;
  * permissions may prevent PHP from properly outputting messages.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class Syslog extends AbstractLogger
 {

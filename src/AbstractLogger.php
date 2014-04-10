@@ -15,6 +15,7 @@ namespace Joomla\Log;
  * to exist regardless of the child class.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 abstract class AbstractLogger
 {

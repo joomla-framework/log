@@ -17,6 +17,7 @@ use Joomla\Date\Date;
  * supported engines, retrieving lists and building in memory (PHP based) search operations.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class LogEntry
 {

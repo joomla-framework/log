@@ -15,6 +15,7 @@ use Joomla\Log\LogEntry;
  * Joomla Echo logger class.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class Echoo extends AbstractLogger
 {

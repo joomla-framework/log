@@ -19,6 +19,7 @@ use Joomla\Log\LogEntry;
  * default it emulates the Syslog style format output. This is a disk based output format.
  *
  * @since  1.0
+ * @deprecated  The joomla/log package is deprecated
  */
 class Formattedtext extends AbstractLogger
 {
