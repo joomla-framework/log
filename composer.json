@@ -16,7 +16,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Joomla\\Log\\": "src/",
+            "Joomla\\Log\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Joomla\\Log\\Tests\\": "Tests/"
         }
     }
