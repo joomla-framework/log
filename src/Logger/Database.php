@@ -19,7 +19,7 @@ use Joomla\Log\LogEntry;
  * table are based on the Syslog style of log output. This is designed to allow quick and
  * easy searching.
  *
- * @since  1.0
+ * @since       1.0
  * @deprecated  The joomla/log package is deprecated
  */
 class Database extends AbstractLogger
