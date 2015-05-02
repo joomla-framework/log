@@ -14,7 +14,7 @@ namespace Joomla\Log\Logger;
  * This class is designed to build log files based on the W3c specification
  * at: http://www.w3.org/TR/WD-logfile.html
  *
- * @since  1.0
+ * @since       1.0
  * @deprecated  The joomla/log package is deprecated
  */
 class W3c extends Formattedtext

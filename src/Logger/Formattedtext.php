@@ -18,7 +18,7 @@ use Joomla\Log\LogEntry;
  * This class is designed to use as a base for building formatted text files for output. By
  * default it emulates the Syslog style format output. This is a disk based output format.
  *
- * @since  1.0
+ * @since       1.0
  * @deprecated  The joomla/log package is deprecated
  */
 class Formattedtext extends AbstractLogger
