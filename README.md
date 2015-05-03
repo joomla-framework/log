@@ -1,5 +1,7 @@
 ## The Log Package [![Build Status](https://travis-ci.org/joomla-framework/log.png?branch=master)](https://travis-ci.org/joomla-framework/log)
 
+[![Latest Stable Version](https://poser.pugx.org/joomla/log/v/stable)](https://packagist.org/packages/joomla/log) [![Total Downloads](https://poser.pugx.org/joomla/log/downloads)](https://packagist.org/packages/joomla/log) [![Latest Unstable Version](https://poser.pugx.org/joomla/log/v/unstable)](https://packagist.org/packages/joomla/log) [![License](https://poser.pugx.org/joomla/log/license)](https://packagist.org/packages/joomla/log)
+
 ### Deprecated
 
 The `joomla/log` package has been deprecated.  No further updates are planned.
