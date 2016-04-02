@@ -14,7 +14,7 @@
         "joomla/database": "~1.0",
         "joomla/test": "~1.0",
         "phpunit/phpunit": "~4.8|~5.0",
-	    "phpunit/dbunit": "~1.3",
+	"phpunit/dbunit": "~1.3",
         "squizlabs/php_codesniffer": "1.*"
     },
     "suggest": {
@@ -22,7 +22,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Joomla\\Log\\": "src/",
+            "Joomla\\Log\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Joomla\\Log\\Tests\\": "Tests/"
         }
     }
