@@ -142,26 +142,27 @@ class Log
 	 * @param   integer  $priority  Message priority.
 	 * @param   string   $category  Type of entry
 	 * @param   string   $date      Date of entry (defaults to now if not specified or blank)
+	 * @param   array    $context   An optional array with additional message context.
 	 *
 	 * @return  void
 	 *
 	 * @since   1.0
 	 */
-	public static function add($entry, $priority = self::INFO, $category = '', $date = null)
+	public static function add($entry, $priority = self::INFO, $category = '', $date = null, array $context = array())
 	{
 		// Automatically instantiate the singleton object if not already done.
-		if (empty(self::$instance))
+		if (empty(static::$instance))
 		{
-			self::setInstance(new self);
+			static::setInstance(new static);
 		}
 
 		// If the entry object isn't a LogEntry object let's make one.
 		if (!($entry instanceof LogEntry))
 		{
-			$entry = new LogEntry((string) $entry, $priority, $category, $date);
+			$entry = new LogEntry((string) $entry, $priority, $category, $date, $context);
 		}
 
-		self::$instance->addLogEntry($entry);
+		static::$instance->addLogEntry($entry);
 	}
 
 	/**
@@ -179,9 +180,9 @@ class Log
 	public static function addLogger(array $options, $priorities = self::ALL, $categories = array(), $exclude = false)
 	{
 		// Automatically instantiate the singleton object if not already done.
-		if (empty(self::$instance))
+		if (empty(static::$instance))
 		{
-			self::setInstance(new self);
+			static::setInstance(new static);
 		}
 
 		// The default logger is the formatted text log file.
@@ -210,16 +211,34 @@ class Log
 		}
 
 		// Register the configuration if it doesn't exist.
-		if (empty(self::$instance->configurations[$signature]))
+		if (empty(static::$instance->configurations[$signature]))
 		{
-			self::$instance->configurations[$signature] = $options;
+			static::$instance->configurations[$signature] = $options;
 		}
 
-		self::$instance->lookup[$signature] = (object) array(
+		static::$instance->lookup[$signature] = (object) array(
 			'priorities' => $priorities,
 			'categories' => array_map('strtolower', (array) $categories),
 			'exclude' => (bool) $exclude
 		);
+	}
+
+	/**
+	 * Creates a delegated PSR-3 compatible logger from the current singleton instance. This method always returns a new delegated logger.
+	 *
+	 * @return  DelegatingPsrLogger
+	 *
+	 * @since   __DEPLOY_VERSION__
+	 */
+	public static function createDelegatedLogger()
+	{
+		// Ensure a singleton instance has been created first
+		if (empty(static::$instance))
+		{
+			static::setInstance(new static);
+		}
+
+		return new DelegatingPsrLogger(static::$instance);
 	}
 
 	/**
@@ -236,7 +255,7 @@ class Log
 	{
 		if (($instance instanceof Log) || $instance === null)
 		{
-			self::$instance = & $instance;
+			static::$instance = & $instance;
 		}
 	}
 

@@ -95,6 +95,23 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * Test that a delegated PSR-3 logger is created.
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
+	 */
+	public function testCreateDelegatedLogger()
+	{
+		Log::setInstance(null);
+
+		$this->assertInstanceOf(
+			'Joomla\Log\DelegatingPsrLogger',
+			Log::createDelegatedLogger()
+		);
+	}
+
+	/**
 	 * Test the Joomla\Log\Log::findLoggers method to make sure given a category we are finding the correct loggers that
 	 * have been added to Joomla\Log\Log.  It is important to note that if a logger was added with no category, then it
 	 * will be returned for all categories.
