@@ -6,7 +6,7 @@
     "homepage": "https://github.com/joomla-framework/log",
     "license": "GPL-2.0+",
     "require": {
-        "php": ">=5.3.10|>=7.0",
+        "php": "^5.3.10|~7.0",
         "joomla/date": "~1.0",
         "joomla/filesystem": "~1.0",
         "psr/log": "~1.0"
