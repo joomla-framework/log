@@ -9,6 +9,7 @@ namespace Joomla\Log\Tests\Logger;
 use Joomla\Log\LogEntry;
 use Joomla\Log\Logger\Callback;
 use Joomla\Test\TestHelper;
+use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/CallbackMethods.php';
 
@@ -17,7 +18,7 @@ require_once __DIR__ . '/CallbackMethods.php';
  *
  * @since  1.0
  */
-class CallbackTest extends \PHPUnit_Framework_TestCase
+class CallbackTest extends TestCase
 {
 	/**
 	 * Test the Joomla\Log\Logger\Callback::__construct method.

@@ -8,13 +8,14 @@ namespace Joomla\Log\Tests;
 
 use Joomla\Log\Log;
 use Joomla\Log\LogEntry;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test class for Joomla\Log\Log.
  *
  * @since  1.0
  */
-class LogTest extends \PHPUnit_Framework_TestCase
+class LogTest extends TestCase
 {
 	/**
 	 * Overrides the parent tearDown method.

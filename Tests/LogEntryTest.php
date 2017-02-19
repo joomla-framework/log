@@ -9,13 +9,14 @@ namespace Joomla\Log\Tests;
 use Joomla\Log\LogEntry;
 use Joomla\Log\Log;
 use Joomla\Date\Date;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test class for Joomla\Log\LogEntry.
  *
  * @since  1.0
  */
-class LogEntryTest extends \PHPUnit_Framework_TestCase
+class LogEntryTest extends TestCase
 {
 	/**
 	 * Verify the default values for the log entry object.

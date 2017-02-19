@@ -6,12 +6,14 @@
 
 namespace Joomla\Log\Tests\Logger;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Test class for Joomla\Log\Logger\Syslog.
  *
  * @since  1.0
  */
-class SyslogTest extends \PHPUnit_Framework_TestCase
+class SyslogTest extends TestCase
 {
 	/**
 	 * Test the Joomla\Log\Logger\Syslog::addEntry method.

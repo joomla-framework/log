@@ -9,13 +9,14 @@ namespace Joomla\Log\Tests\Logger;
 use Joomla\Log\Log;
 use Joomla\Log\LogEntry;
 use Joomla\Log\Logger\Echoo as LoggerEcho;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test class for Joomla\Log\Logger\Echoo.
  *
  * @since  1.0
  */
-class EchoTest extends \PHPUnit_Framework_TestCase
+class EchoTest extends TestCase
 {
 	/**
 	 * @var    LoggerEcho

@@ -10,13 +10,14 @@ use Joomla\Log\Log;
 use Joomla\Log\LogEntry;
 use Joomla\Log\Logger\Formattedtext;
 use Joomla\Test\TestHelper;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test class for Joomla\Log\Logger\Formattedtext.
  *
  * @since  1.0
  */
-class FormattedtextTest extends \PHPUnit_Framework_TestCase
+class FormattedtextTest extends TestCase
 {
 	/**
 	 * Sets up the fixture, for example, opens a network connection.

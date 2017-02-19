@@ -10,13 +10,14 @@ use Joomla\Log\Log;
 use Joomla\Log\LogEntry;
 use Joomla\Log\Logger\W3c;
 use Joomla\Test\TestHelper;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test class for Joomla\Log\Logger\W3c.
  *
  * @since  1.0
  */
-class W3cTest extends \PHPUnit_Framework_TestCase
+class W3cTest extends TestCase
 {
 	/**
 	 * Sets up the fixture, for example, opens a network connection.
