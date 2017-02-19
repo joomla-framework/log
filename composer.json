@@ -18,6 +18,9 @@
         "phpunit/dbunit": "~1.3|~2.0",
         "squizlabs/php_codesniffer": "1.*"
     },
+    "provide": {
+        "psr/log-implementation": "~1.0"
+    },
     "suggest": {
         "joomla/database": "Install joomla/database to use the database logger."
     },
