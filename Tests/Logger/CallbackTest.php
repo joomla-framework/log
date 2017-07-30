@@ -27,35 +27,9 @@ class CallbackTest extends TestCase
 	 *
 	 * @since   1.0
 	 */
-	public function testConstructor01()
-	{
-		// Create a callback function
-		$callback = create_function('$entry', 'return;');
-
-		// Setup the basic configuration.
-		$config = array(
-			'callback' => $callback
-		);
-
-		$logger = new Callback($config);
-
-		// Callback was set.
-		$this->assertEquals(TestHelper::getValue($logger, 'callback'), $callback, 'Line: ' . __LINE__);
-
-		// Callback is callable
-		$this->assertTrue(is_callable(TestHelper::getValue($logger, 'callback')), 'Line: ' . __LINE__);
-	}
-
-	/**
-	 * Test the Joomla\Log\Logger\Callback::__construct method.
-	 *
-	 * @return  null
-	 *
-	 * @since   1.0
-	 */
 	public function testConstructor02()
 	{
-		// Create a callback function (since php 5.3)
+		// Create a callback function
 		$callback = function ($entry)
 		{
 			return;
@@ -136,7 +110,7 @@ class CallbackTest extends TestCase
 	 */
 	public function testConstructor05()
 	{
-		// Use a defined static method (since php 5.2.3)
+		// Use a defined static method
 		$callback = '\\Joomla\\Log\\Tests\\Logger\\CallbackHelper::callback01';
 
 		// Setup the basic configuration.
@@ -189,7 +163,7 @@ class CallbackTest extends TestCase
 	 */
 	public function testAddEntry()
 	{
-		// Use a defined static method (since php 5.2.3)
+		// Use a defined static method
 		$callback = '\\Joomla\\Log\\Tests\\Logger\\CallbackHelper::callback01';
 
 		// Setup the basic configuration.
