@@ -4,7 +4,7 @@
     "description": "Joomla Log Package",
     "keywords": ["joomla", "framework", "log"],
     "homepage": "https://github.com/joomla-framework/log",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "require": {
         "php": "^5.3.10|~7.0",
         "joomla/date": "~1.0",
