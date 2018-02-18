@@ -51,7 +51,7 @@ class Formattedtext extends AbstractLogger
 	/**
 	 * Constructor.
 	 *
-	 * @param   array  &$options  Log object options.
+	 * @param   array  $options  Log object options.
 	 *
 	 * @since   1.0
 	 * @throws  \RuntimeException
@@ -112,7 +112,7 @@ class Formattedtext extends AbstractLogger
 	 *
 	 * @param   LogEntry  $entry  The log entry object to add to the log.
 	 *
-	 * @return  boolean  True on success.
+	 * @return  void
 	 *
 	 * @since   1.0
 	 * @throws  \RuntimeException

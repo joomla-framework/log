@@ -44,7 +44,7 @@ class Syslog extends AbstractLogger
 	/**
 	 * Constructor.
 	 *
-	 * @param   array  &$options  Log object options.
+	 * @param   array  $options  Log object options.
 	 *
 	 * @since   1.0
 	 */

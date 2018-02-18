@@ -44,7 +44,7 @@ abstract class AbstractLogger
 	/**
 	 * Constructor.
 	 *
-	 * @param   array  &$options  Log object options.
+	 * @param   array  $options  Log object options.
 	 *
 	 * @since   1.0
 	 */

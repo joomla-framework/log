@@ -31,7 +31,7 @@ class Callback extends AbstractLogger
 	/**
 	 * Constructor.
 	 *
-	 * @param   array  &$options  Log object options.
+	 * @param   array  $options  Log object options.
 	 *
 	 * @since   1.0
 	 * @throws  \Exception
@@ -57,7 +57,7 @@ class Callback extends AbstractLogger
 	 *
 	 * @param   LogEntry  $entry  The log entry object to add to the log.
 	 *
-	 * @return  boolean  True on success.
+	 * @return  void
 	 *
 	 * @since   1.0
 	 * @throws  \Exception
