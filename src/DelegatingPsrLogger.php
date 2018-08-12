@@ -42,7 +42,7 @@ class DelegatingPsrLogger extends PsrAbstractLogger
 		LogLevel::WARNING   => Log::WARNING,
 		LogLevel::NOTICE    => Log::NOTICE,
 		LogLevel::INFO      => Log::INFO,
-		LogLevel::DEBUG     => Log::DEBUG
+		LogLevel::DEBUG     => Log::DEBUG,
 	);
 
 	/**

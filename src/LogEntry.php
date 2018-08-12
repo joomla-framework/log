@@ -76,7 +76,7 @@ class LogEntry
 		Log::WARNING,
 		Log::NOTICE,
 		Log::INFO,
-		Log::DEBUG
+		Log::DEBUG,
 	);
 
 	/**

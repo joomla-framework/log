@@ -33,13 +33,14 @@ abstract class AbstractLogger
 	 */
 	protected $priorities = array(
 		Log::EMERGENCY => 'EMERGENCY',
-		Log::ALERT => 'ALERT',
-		Log::CRITICAL => 'CRITICAL',
-		Log::ERROR => 'ERROR',
-		Log::WARNING => 'WARNING',
-		Log::NOTICE => 'NOTICE',
-		Log::INFO => 'INFO',
-		Log::DEBUG => 'DEBUG');
+		Log::ALERT     => 'ALERT',
+		Log::CRITICAL  => 'CRITICAL',
+		Log::ERROR     => 'ERROR',
+		Log::WARNING   => 'WARNING',
+		Log::NOTICE    => 'NOTICE',
+		Log::INFO      => 'INFO',
+		Log::DEBUG     => 'DEBUG',
+	);
 
 	/**
 	 * Constructor.

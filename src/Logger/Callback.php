@@ -8,8 +8,8 @@
 
 namespace Joomla\Log\Logger;
 
-use Joomla\Log\LogEntry;
 use Joomla\Log\AbstractLogger;
+use Joomla\Log\LogEntry;
 
 /**
  * Joomla! Callback Log class

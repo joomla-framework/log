@@ -9,8 +9,8 @@
 namespace Joomla\Log\Logger;
 
 use Joomla\Log\AbstractLogger;
-use Joomla\Log\LogEntry;
 use Joomla\Log\Log;
+use Joomla\Log\LogEntry;
 
 /**
  * Joomla! Syslog Log class
@@ -33,13 +33,14 @@ class Syslog extends AbstractLogger
 	 */
 	protected $priorities = array(
 		Log::EMERGENCY => 'EMERG',
-		Log::ALERT => 'ALERT',
-		Log::CRITICAL => 'CRIT',
-		Log::ERROR => 'ERR',
-		Log::WARNING => 'WARNING',
-		Log::NOTICE => 'NOTICE',
-		Log::INFO => 'INFO',
-		Log::DEBUG => 'DEBUG');
+		Log::ALERT     => 'ALERT',
+		Log::CRITICAL  => 'CRIT',
+		Log::ERROR     => 'ERR',
+		Log::WARNING   => 'WARNING',
+		Log::NOTICE    => 'NOTICE',
+		Log::INFO      => 'INFO',
+		Log::DEBUG     => 'DEBUG',
+	);
 
 	/**
 	 * Constructor.
