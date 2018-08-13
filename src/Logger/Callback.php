@@ -42,7 +42,7 @@ class Callback extends AbstractLogger
 		parent::__construct($options);
 
 		// Throw an exception if there is not a valid callback
-		if (isset($this->options['callback']) && is_callable($this->options['callback']))
+		if (isset($this->options['callback']) && \is_callable($this->options['callback']))
 		{
 			$this->callback = $this->options['callback'];
 		}
@@ -65,6 +65,6 @@ class Callback extends AbstractLogger
 	public function addEntry(LogEntry $entry)
 	{
 		// Pass the log entry to the callback function
-		call_user_func($this->callback, $entry);
+		\call_user_func($this->callback, $entry);
 	}
 }

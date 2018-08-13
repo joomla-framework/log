@@ -101,7 +101,7 @@ class Formattedtext extends AbstractLogger
 	 */
 	public function __destruct()
 	{
-		if (is_resource($this->file))
+		if (\is_resource($this->file))
 		{
 			fclose($this->file);
 		}
@@ -120,7 +120,7 @@ class Formattedtext extends AbstractLogger
 	public function addEntry(LogEntry $entry)
 	{
 		// Initialise the file if not already done.
-		if (!is_resource($this->file))
+		if (!\is_resource($this->file))
 		{
 			$this->initFile();
 		}
@@ -144,7 +144,7 @@ class Formattedtext extends AbstractLogger
 		}
 
 		// If the time field is missing or the date field isn't only the date we need to rework it.
-		if ((strlen($entry->date) != 10) || !isset($entry->time))
+		if ((\strlen($entry->date) != 10) || !isset($entry->time))
 		{
 			// Get the date and time strings in GMT.
 			$entry->datetime = $entry->date->toISO8601();
@@ -220,7 +220,7 @@ class Formattedtext extends AbstractLogger
 		if (!is_file($this->path))
 		{
 			// Make sure the folder exists in which to create the log file.
-			Folder::create(dirname($this->path));
+			Folder::create(\dirname($this->path));
 
 			// Build the log file header.
 			$head = $this->generateFileHeader();
@@ -258,7 +258,7 @@ class Formattedtext extends AbstractLogger
 		$matches      = array();
 
 		// Get all of the available fields in the format string.
-		preg_match_all("/{(.*?)}/i", $this->format, $matches);
+		preg_match_all('/{(.*?)}/i', $this->format, $matches);
 
 		// Build the parsed fields list based on the found fields.
 		foreach ($matches[1] as $match)

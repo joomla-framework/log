@@ -97,7 +97,7 @@ class Syslog extends AbstractLogger
 		$sysFacility = LOG_USER;
 
 		// If we have a facility passed in and we're not on Windows, reset it.
-		if (isset($this->options['sys_facility']) && !defined('PHP_WINDOWS_VERSION_MAJOR'))
+		if (isset($this->options['sys_facility']) && !\defined('PHP_WINDOWS_VERSION_MAJOR'))
 		{
 			$sysFacility = $this->options['sys_facility'];
 		}
@@ -128,7 +128,7 @@ class Syslog extends AbstractLogger
 	public function addEntry(LogEntry $entry)
 	{
 		// Generate the value for the priority based on predefined constants.
-		$priority = constant(strtoupper('LOG_' . $this->priorities[$entry->priority]));
+		$priority = \constant(strtoupper('LOG_' . $this->priorities[$entry->priority]));
 
 		// Send the entry to Syslog.
 		syslog($priority, '[' . $entry->category . '] ' . $entry->message);

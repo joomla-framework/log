@@ -326,7 +326,7 @@ class Log
 					 * If either there are no set categories or the category (including the empty case) is not in the list of excluded categories,
 					 * add this logger.
 					 */
-					if (empty($rules->categories) || !in_array($category, $rules->categories))
+					if (empty($rules->categories) || !\in_array($category, $rules->categories))
 					{
 						$loggers[] = $signature;
 					}
@@ -334,7 +334,7 @@ class Log
 				else
 				{
 					// If either there are no set categories (meaning all) or the specific category is set, add this logger.
-					if (empty($category) || empty($rules->categories) || in_array($category, $rules->categories))
+					if (empty($category) || empty($rules->categories) || \in_array($category, $rules->categories))
 					{
 						$loggers[] = $signature;
 					}
